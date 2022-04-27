@@ -43,6 +43,16 @@ h1 {
     letter-spacing: 0.06em;
 }
 
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #000000;
+    line-height: 32.5px;
+}
+
+
 .btn {
     display: flex;
     justify-content: center;
@@ -172,8 +182,63 @@ h1 {
         background-position: 88% 100%;
         background-repeat: no-repeat;
     }
+
+    .about {
+        margin-top: 80px;
+    }
+
+    .about-wrapper {
+        display: flex;
+        padding: 0 175px 0 175px;
+    }
+
+    .about-img {
+        background: url("../../../assets/images/about-pets.png");
+        width: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 120px;
+    }
+
+    .about-info {
+        width: 430px;
+        max-width: 100%;
+    }
+
+    .about-title {
+        color: #545454;
+        font-weight: 400;
+        font-size: 35px;
+        letter-spacing: 0.06em;
+
+    }
+
+    .about-desc {
+        color: #4C4C4C;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .friends-wrapper {
+        padding-top: 80px;
+    }
+
+    .friends-title {
+        text-align: center;
+        font-weight: 400;
+        font-size: 35px;
+        color: #545454;
+        line-height: 45px;
+        letter-spacing: 0.06em;
+
+    }
+
 }
 
+.friends {
+    background: #F6F6F6;
+}
 
 a {
     text-decoration: none;
