@@ -63,7 +63,6 @@ h2 {
     width: 207px;
     height: 52px;
     color: #292929;
-    background: #F1CDB3;
     border-radius: 100px;
     font-family: Georgia, serif;
     font-size: 17px;
@@ -75,7 +74,21 @@ h2 {
 }
 
 .hero-btn {
+    background: #F1CDB3;
     margin-top: 42px;
+}
+
+.friend-btn {
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    background: white;
+    margin: 0 auto;
+
+}
+
+.friends-btn {
+    background: #F1CDB3;
+    width: 261px;
 }
 
 .logo-title {
@@ -195,6 +208,7 @@ h2 {
     .about-img {
         background: url("../../../assets/images/about-pets.png");
         width: 300px;
+        height: 408px;
         background-size: cover;
         background-repeat: no-repeat;
         margin-right: 120px;
@@ -224,6 +238,13 @@ h2 {
         padding-top: 80px;
     }
 
+    .friend-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 90px;
+        padding: 0 105px;
+    }
+
     .friends-title {
         text-align: center;
         font-weight: 400;
@@ -231,8 +252,31 @@ h2 {
         color: #545454;
         line-height: 45px;
         letter-spacing: 0.06em;
+        margin-bottom: 60px;
 
     }
+
+    .friend-title {
+        font-family: Georgia, serif;
+        text-align: center;
+        color: #545454;
+        letter-spacing: 0.06em;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        margin: 30px 0;
+    }
+
+    .friend-card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #FAFAFA;
+        border-radius: 9px;
+        width: 270px;
+    }
+
+
 
 }
 
@@ -242,6 +286,36 @@ h2 {
 
 a {
     text-decoration: none;
+}
+
+.friends-btn__wrapper {
+    margin-top: 60px;
+}
+
+.slide-nav {
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.slide-icon {
+    width: 19px;
+}
+
+.icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Helpers */
