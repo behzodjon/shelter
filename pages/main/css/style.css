@@ -276,8 +276,89 @@ h2 {
         width: 270px;
     }
 
+    .help {
+        margin: 80px 0;
+    }
 
+    .help-icons__wrapper {
+        padding: 0 87px;
+    }
 
+    .help-icon__title {
+        color: #545454;
+        letter-spacing: 0.06em;
+        font-family: Georgia, serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .help-icons__first {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .help-icons__first:first-child {
+        margin-bottom: 66px;
+    }
+
+    .help-icons__first:last-child {
+        padding: 0 84px;
+    }
+
+    .donation {
+        background: #F6F6F6;
+    }
+
+    .donation-wrapper {
+        padding: 91px 142px 0;
+        gap: 30px;
+    }
+
+    .donation-box {
+        width: 380px;
+        max-width: 100%;
+    }
+
+    .donation-title {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .donation-subtitle {
+        color: #545454;
+        letter-spacing: 0.06em;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: 400;
+        font-family: Georgia, serif;
+        margin-bottom: 20px;
+    }
+
+    .donation-card {
+        background: #F1CDB3;
+        border-radius: 9px;
+        padding: 10px 15px;
+        gap: 15px;
+    }
+
+    .donation-card__number {
+        letter-spacing: 0.06em;
+        font-family: Georgia, serif;
+        font-weight: 400;
+        font-size: 20px;
+        color: #545454;
+    }
+
+    .donation-text {
+        color: #B2B2B2;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .friends {
@@ -302,6 +383,11 @@ a {
 
 .slide-icon {
     width: 19px;
+}
+
+.help-icon {
+    width: 60px;
+    height: 60px;
 }
 
 .icon-wrap {
