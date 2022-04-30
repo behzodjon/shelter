@@ -197,7 +197,7 @@ h2 {
     }
 
     .about {
-        margin-top: 80px;
+        margin: 80px 0;
     }
 
     .about-wrapper {
@@ -235,7 +235,7 @@ h2 {
     }
 
     .friends-wrapper {
-        padding-top: 80px;
+        padding: 80px 0;
     }
 
     .friend-cards {
@@ -313,7 +313,7 @@ h2 {
     }
 
     .donation-wrapper {
-        padding: 91px 142px 0;
+        padding: 91px 142px 100px;
         gap: 30px;
     }
 
@@ -359,6 +359,24 @@ h2 {
         font-size: 12px;
         line-height: 18px;
     }
+
+    .footer {
+        background: url("../../../assets/images/footer-gradient-background.png");
+        background-size: cover;
+        padding: 40px 0 60px;
+    }
+
+    .footer-title {
+        color: #FFFFFF;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 45px;
+        margin-bottom: 40px;
+    }
+
+    .contact-wrapper {
+        gap: 161px;
+    }
 }
 
 .friends {
@@ -402,6 +420,27 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.address-wrapper {
+    gap: 20px;
+}
+
+.footer-img {
+    padding-bottom: 50px;
+}
+
+.address-wrapper:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.address-title {
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    font-weight: 400;
 }
 
 /* Helpers */
