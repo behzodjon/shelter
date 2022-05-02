@@ -26,6 +26,10 @@ body {
     font-size: 15px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -86,9 +90,18 @@ h2 {
 
 }
 
+.friend-btn:hover {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+}
 .friends-btn {
     background: #F1CDB3;
     width: 261px;
+}
+
+.friends-btn:hover {
+    background: #fff;
+    border: 1px solid #F1CDB3;
 }
 
 .logo-title {
@@ -127,7 +140,7 @@ h2 {
 
 @media (min-width: 1280px) {
     .header-background {
-        background: url("../../../assets/images/start-screen-gradient-background.png");
+        background: url("../../../assets/images/start-screen-gradient-background.png") ;
         background-size: cover;
     }
 
@@ -282,6 +295,14 @@ h2 {
         width: 270px;
     }
 
+
+    .friend-img {
+        background: url("../../../assets/images/pets-katrine.png");
+        background-size: cover;
+        width: 270px;
+        height: 270px;
+    }
+
     /* help section styles */
 
     .help {
@@ -371,7 +392,7 @@ h2 {
     }
 
     /* footer styles */
-    
+
     .footer {
         background: url("../../../assets/images/footer-gradient-background.png");
         background-size: cover;
@@ -409,6 +430,23 @@ a {
     width: 52px;
     height: 52px;
     flex-shrink: 0;
+}
+
+.slide-nav:hover {
+    background: #F1CDB3;
+    cursor: pointer;
+}
+
+.friend-card:hover {
+    cursor: pointer;
+}
+
+.friend-card:hover {
+    cursor: pointer;
+}
+
+.friend-card:hover ~ .friend-btn{
+    background: #F1CDB3
 }
 
 .slide-icon {
