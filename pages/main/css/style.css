@@ -159,6 +159,8 @@ h2 {
         color: #CDCDCD;
     }
 
+    /* hero styles */
+
     .hero-wrapper {
         display: flex;
         align-items: center;
@@ -195,6 +197,8 @@ h2 {
         background-position: 88% 100%;
         background-repeat: no-repeat;
     }
+
+    /* about styles */
 
     .about {
         margin: 80px 0;
@@ -233,6 +237,8 @@ h2 {
         font-size: 15px;
         line-height: 24px;
     }
+
+    /* friends styles */
 
     .friends-wrapper {
         padding: 80px 0;
@@ -276,6 +282,8 @@ h2 {
         width: 270px;
     }
 
+    /* help section styles */
+
     .help {
         margin: 80px 0;
     }
@@ -307,6 +315,8 @@ h2 {
     .help-icons__first:last-child {
         padding: 0 84px;
     }
+
+    /* donation section styles */
 
     .donation {
         background: #F6F6F6;
@@ -360,6 +370,8 @@ h2 {
         line-height: 18px;
     }
 
+    /* footer styles */
+    
     .footer {
         background: url("../../../assets/images/footer-gradient-background.png");
         background-size: cover;
