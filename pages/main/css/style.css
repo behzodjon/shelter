@@ -90,9 +90,18 @@ h2 {
 
 }
 
+.friend-btn:hover {
+    border: 2px solid #F1CDB3;
+    background: #F1CDB3;
+}
 .friends-btn {
     background: #F1CDB3;
     width: 261px;
+}
+
+.friends-btn:hover {
+    background: #fff;
+    border: 1px solid #F1CDB3;
 }
 
 .logo-title {
@@ -286,6 +295,7 @@ h2 {
         width: 270px;
     }
 
+
     .friend-img {
         background: url("../../../assets/images/pets-katrine.png");
         background-size: cover;
@@ -429,7 +439,14 @@ a {
 
 .friend-card:hover {
     cursor: pointer;
-    background: #F1CDB3;
+}
+
+.friend-card:hover {
+    cursor: pointer;
+}
+
+.friend-card:hover ~ .friend-btn{
+    background: #F1CDB3
 }
 
 .slide-icon {
