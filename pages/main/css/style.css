@@ -91,6 +91,7 @@ h2 {
     border-radius: 100px;
     background: white;
     margin: 0 auto;
+    margin-bottom: 1rem;
 
 }
 
@@ -446,10 +447,8 @@ a {
 
 .friend-card:hover {
     cursor: pointer;
-}
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
-.friend-card:hover {
-    cursor: pointer;
 }
 
 .friend-card:hover .friend-btn {
@@ -484,7 +483,7 @@ a {
 }
 
 .footer-img {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .address-wrapper:not(:last-child) {
