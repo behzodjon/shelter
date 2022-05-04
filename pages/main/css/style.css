@@ -404,7 +404,7 @@ h2 {
     .footer {
         background: url("../../../assets/images/footer-gradient-background.png");
         background-size: cover;
-        padding: 40px 0 60px;
+        padding: 40px 0 0;
     }
 
     .footer-title {
@@ -482,9 +482,7 @@ a {
     gap: 20px;
 }
 
-.footer-img {
-    padding-bottom: 30px;
-}
+
 
 .address-wrapper:not(:last-child) {
     margin-bottom: 40px;
