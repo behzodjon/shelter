@@ -83,7 +83,7 @@ h2 {
 }
 
 .hero-btn:hover {
-    background: #fff;
+    background: #FDDCC4;
 }
 
 .friend-btn {
@@ -95,8 +95,7 @@ h2 {
 }
 
 .friend-btn:hover {
-    border: 2px solid #F1CDB3;
-    background: #F1CDB3;
+    background: #FDDCC4;
 }
 
 .friends-btn {
@@ -105,8 +104,7 @@ h2 {
 }
 
 .friends-btn:hover {
-    background: #fff;
-    border: 1px solid #F1CDB3;
+    background: #FDDCC4;
 }
 
 .logo-title {
@@ -389,8 +387,7 @@ h2 {
     }
 
     .donation-card:hover {
-        background: #fff;
-        border: 1px solid #F1CDB3;
+        background: #FDDCC4;
     }
 
     .donation-text {
@@ -443,7 +440,7 @@ a {
 }
 
 .slide-nav:hover {
-    background: #F1CDB3;
+    background: #FDDCC4;
     cursor: pointer;
 }
 
@@ -455,8 +452,8 @@ a {
     cursor: pointer;
 }
 
-.friend-card:hover~.friend-btn {
-    background: #F1CDB3
+.friend-card:hover .friend-btn {
+    background: #FDDCC4
 }
 
 .slide-icon {
