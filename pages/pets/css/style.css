@@ -164,6 +164,26 @@ li {
     width: 270px;
     height: 270px;
 }
+
+/* footer styles */
+
+.footer {
+    background: url("../../../assets/images/footer-gradient-background.png");
+    background-size: cover;
+    padding: 40px 0 0;
+}
+
+.footer-title {
+    color: #FFFFFF;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    gap: 161px;
+}
 /* Helpers */
 
 /* container */
