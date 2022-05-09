@@ -208,7 +208,7 @@ h2 {
 /* footer styles */
 
 .footer {
-    background: url("../../../assets/images/footer-gradient-background.png");
+    background: url("../images/footer-gradient-background.png");
     background-size: cover;
     padding: 40px 0 0;
 }
