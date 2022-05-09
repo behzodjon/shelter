@@ -1,82 +1,3 @@
-/* Fonts */
-
-@font-face {
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Arial'), url('../../../assets/fonts/Arial.woff') format('woff');
-}
-
-
-@font-face {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Georgia'), url('../../../assets/fonts/Georgia.woff') format('woff');
-}
-
-/* Main styles */
-
-body {
-    padding: 0;
-    box-sizing: border-box;
-    min-width: 320px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0px 10px 0 10px;
-}
-
-h1 {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    font-size: 32px;
-    color: #F1CDB3;
-    line-height: 35px;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-}
-
-h2 {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, serif;
-    font-size: 25px;
-    color: #000000;
-    line-height: 32.5px;
-}
-
-
-.btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    width: 207px;
-    height: 52px;
-    color: #292929;
-    border-radius: 100px;
-    font-family: Georgia, serif;
-    font-size: 17px;
-    line-height: 22px;
-    letter-spacing: 0.06em;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
 .hero-btn {
     background: #F1CDB3;
     margin-top: 42px;
@@ -261,12 +182,7 @@ h2 {
         padding: 80px 0;
     }
 
-    .friend-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 90px;
-        padding: 0 105px;
-    }
+
 
     .friends-title {
         text-align: center;
@@ -399,21 +315,7 @@ h2 {
         line-height: 18px;
     }
 
-    /* footer styles */
-
-    .footer {
-        background: url("../../../assets/images/footer-gradient-background.png");
-        background-size: cover;
-        padding: 40px 0 0;
-    }
-
-    .footer-title {
-        color: #FFFFFF;
-        font-size: 35px;
-        font-weight: 400;
-        line-height: 45px;
-        margin-bottom: 40px;
-    }
+   
 
     .contact-wrapper {
         gap: 161px;
@@ -464,13 +366,7 @@ a {
     height: 60px;
 }
 
-.icon-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+
 
 .slide-wrapper {
     display: flex;
@@ -495,96 +391,4 @@ a {
     font-size: 20px;
     font-family: Georgia, serif;
     font-weight: 400;
-}
-
-/* Helpers */
-
-/* container */
-.flex {
-    display: flex;
-}
-
-/* direction */
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-col-r {
-    flex-direction: column-reverse;
-}
-
-.flex-row-r {
-    flex-direction: row-reverse;
-}
-
-/* wrap */
-.flex.nowrap {
-    flex-wrap: nowrap;
-}
-
-.flex.wrap {
-    flex-wrap: wrap;
-}
-
-.flex.wrap-reverse {
-    flex-wrap: wrap;
-}
-
-/* main axis */
-.justify-start {
-    justify-content: flex-start;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.justify-evenly {
-    justify-content: space-evenly;
-}
-
-/* cross axis */
-.align-start {
-    align-items: flex-start;
-}
-
-.align-end {
-    align-items: flex-end;
-}
-
-.align-center {
-    align-items: center;
-}
-
-.align-baseline {
-    align-items: baseline;
-}
-
-.align-stretch {
-    align-items: stretch;
-}
-
-/* grow/shrink */
-.flex-grow {
-    flex-grow: 1;
-}
-
-.flex-shrink {
-    flex-shrink: 1;
 }
