@@ -159,20 +159,19 @@ h2 {
 
 .friend-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 90px;
-    padding: 0 105px;
 }
 
 .friends-title {
     text-align: center;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 25px;
     color: #545454;
-    line-height: 45px;
+    line-height: 32px;
     letter-spacing: 0.06em;
     margin-bottom: 60px;
-
+    padding: 42px 0;
 }
 
 .friend-title {
@@ -192,7 +191,7 @@ h2 {
     flex-direction: column;
     background: #FAFAFA;
     border-radius: 9px;
-    width: 270px;
+    width: 100%;
 }
 
 
@@ -208,21 +207,22 @@ h2 {
 /* footer styles */
 
 .footer {
-    background: url("../images/footer-gradient-background.png");
+    background: url("../images/start-screen-bg-mobile.png");
     background-size: cover;
     padding: 40px 0 0;
 }
 
 .footer-title {
     color: #FFFFFF;
-    font-size: 35px;
+    font-size: 25px;
+    text-align: center;
     font-weight: 400;
-    line-height: 45px;
+    line-height: 32px;
     margin-bottom: 40px;
 }
 
 .contact-wrapper {
-    gap: 161px;
+    gap: 40px;
 }
 
 .friends {
@@ -236,9 +236,6 @@ a {
 .friends-btn__wrapper {
     margin-top: 60px;
 }
-
-
-
 
 
 .friend-card:hover {
@@ -278,6 +275,120 @@ a {
     font-size: 20px;
     font-family: Georgia, serif;
     font-weight: 400;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-icons__first {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.help-icon__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.help-icon__title {
+    text-align: center;
+}
+
+.footer-img__wrap {
+    width: 86.25%;
+    height: auto;
+    margin: 1rem auto 0;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.about {
+    padding-bottom: 42px;
+}
+
+@media (min-width: 1280px) {
+    .friends-title {
+        font-size: 35px;
+        line-height: 45px;
+        padding: 0;
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    .footer {
+        background: url("../images/footer-gradient-background.png");
+    }
+
+    .footer-img__wrap {
+        width: 300px;
+        height: 310px;
+    }
+
+    .footer-title {
+        text-align: left;
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .contact-wrapper {
+        gap: 161px;
+    }
+
+    .friend-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 105px;
+    }
+
+    .friend-card {
+        width: 270px;
+    }
+
+    .footer-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .help-icon__wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+
 }
 
 /* Helpers */
