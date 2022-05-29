@@ -177,11 +177,76 @@
 .donation-dog {
     width: 100%;
 }
-.help-icons__wrapper{
+
+.help-icons__wrapper {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
 }
+
+@media (min-width: 768px) {
+    .header-background {
+        background: url("../../../assets/images/header-background-768.jpg");
+        background-size: cover;
+    }
+
+    .header-nav {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .hero-title__wrapper {
+        width: fit-content;
+        margin-left: 19%;
+    }
+
+    .hero-title {
+        font-size: 44px;
+        line-height: 57px;
+        text-align: left;
+        letter-spacing: .05px;
+    }
+
+    .hero-desc {
+        text-align: left;
+        line-height: 24px;
+        margin-left: 19%;
+        margin-right: 19%;
+        padding-bottom: 44px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: 593px;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .about-wrapper {
+        padding: 50px 130px 0;
+    }
+    .about-title {
+        padding-bottom: 25px;
+        text-align: left;
+        font-size: 35px;
+        line-height: 45px;
+        letter-spacing: 0.06em;
+    }
+    .about-img{
+        height: 428px;
+    width: 70%;
+    margin: 0 auto;
+    }
+
+}
+
 @media (min-width: 1280px) {
     .header-background {
         background: url("../../../assets/images/start-screen-gradient-background.png");
@@ -193,18 +258,16 @@
         padding: 91px 142px 100px;
         gap: 30px;
     }
-    
+
+    .hero-title__wrapper {
+        width: auto;
+        margin-left: 0;
+    }
+
     .header {
         padding-top: 60px;
     }
 
-    .header-nav {
-        display: block;
-    }
-
-    .burger {
-        display: none;
-    }
 
     .hero-wrapper {
         padding-top: 0;
@@ -261,7 +324,14 @@
     }
 
     .hero-desc {
-        text-align: left;
+        max-width: 473px;
+        font-size: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 0;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        align-self: center;
     }
 
     .hero-img {
@@ -357,18 +427,22 @@
         gap: 6rem;
         justify-content: center;
     }
+
     .donation-dog {
         width: auto;
     }
+
     .help-icon__title {
         font-size: 20px;
     }
+
     .donation-title {
         text-align: left;
     }
+
     .donation-subtitle {
         text-align: left;
-    letter-spacing: 0.06em;
+        letter-spacing: 0.06em;
 
     }
 
@@ -510,15 +584,6 @@ a {
     width: 60px;
     height: 60px;
 }
-
-
-
-
-
-.address-wrapper {
-    gap: 20px;
-}
-
 
 
 .address-wrapper:not(:last-child) {

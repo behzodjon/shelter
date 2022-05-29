@@ -154,7 +154,7 @@ h2 {
 /* friends styles */
 
 .friends-wrapper {
-    padding: 80px 0;
+    padding: 0;
 }
 
 .friend-cards {
@@ -170,7 +170,6 @@ h2 {
     color: #545454;
     line-height: 32px;
     letter-spacing: 0.06em;
-    margin-bottom: 60px;
     padding: 42px 0;
 }
 
@@ -260,6 +259,7 @@ a {
 
 .address-wrapper {
     gap: 20px;
+    justify-content: center;
 }
 
 
@@ -325,11 +325,76 @@ a {
     padding-bottom: 42px;
 }
 
-@media (min-width: 1280px) {
+.friends {
+    padding-bottom: 42px;
+}
+
+.help {
+    padding-bottom: 42px;
+}
+
+.donation {
+    padding-bottom: 42px;
+}
+
+.footer-title__wrapper {
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 30px 30px 0 30px;
+    }
     .friends-title {
         font-size: 35px;
         line-height: 45px;
+    }
+
+    .friend-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .last-card{
+        display: none;
+    }
+    .desktop-nav {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        padding: 0px 10px 0 10px;
+    }
+    .last-card{
+        display: block;
+    }
+    .friends-title {
         padding: 0;
+        margin-bottom: 60px;
+    }
+
+    .address-wrapper {
+        justify-content: start;
+    }
+
+    .footer-title__wrapper {
+        padding: 0;
+    }
+
+    .donation {
+        padding-bottom: 0;
+    }
+
+    .friends {
+        padding-bottom: 0;
+    }
+
+    .help {
+        padding-bottom: 0;
     }
 
     .about {
@@ -338,6 +403,7 @@ a {
 
     .footer {
         background: url("../images/footer-gradient-background.png");
+        background-size: cover;
     }
 
     .footer-img__wrap {
@@ -349,18 +415,19 @@ a {
         text-align: left;
         font-size: 35px;
         line-height: 45px;
+        width: 280px;
+        max-width: 100%;
+        letter-spacing: 0.06em;
     }
 
-    .desktop-nav {
-        display: block;
-    }
-
-    .mobile-nav {
-        display: none;
-    }
+  
 
     .contact-wrapper {
         gap: 161px;
+    }
+
+    .friends-wrapper {
+        padding: 80px 0;
     }
 
     .friend-cards {
