@@ -232,6 +232,7 @@
     .about-wrapper {
         padding: 50px 130px 0;
     }
+
     .about-title {
         padding-bottom: 25px;
         text-align: left;
@@ -239,12 +240,31 @@
         line-height: 45px;
         letter-spacing: 0.06em;
     }
-    .about-img{
+
+    .about-img {
         height: 428px;
-    width: 70%;
-    margin: 0 auto;
+        width: 70%;
+        margin: 0 auto;
     }
 
+    .help-icons__wrapper {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .donation-dog__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        width: 71%;
+        max-width: initial;
+        margin: 0 auto;
+    }
+
+    .donation-box {
+        width: 53.47%;
+        margin: 0 auto;
+    }
 }
 
 @media (min-width: 1280px) {

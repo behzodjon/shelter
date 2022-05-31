@@ -27,6 +27,11 @@
                         <li class="nav-item"><a href="#footer" class="nav-link">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="burger closed">
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                    <div class="burger-item"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -111,10 +116,12 @@
     </main>
     <footer id="footer" class="footer">
         <div class="container">
-            <div class="flex justify-between">
-                <div class="contact-wrapper flex align-center">
+            <div class="footer-wrapper">
+                <div class="contact-wrapper ">
                     <div>
-                        <h2 class="footer-title">For questions <br> and suggestions</h2>
+                        <div>
+                            <h2 class="footer-title">For questions and suggestions</h2>
+                        </div>
                         <div class="address-wrapper flex align-center">
                             <img src="../../assets/icons/icon-email.svg" alt="">
                             <a href="mailto:email@shelter.com">
@@ -130,7 +137,9 @@
                         </div>
                     </div>
                     <div>
-                        <h2 class="footer-title">We are waiting <br> for your visit</h2>
+                        <div class="footer-title__wrapper">
+                            <h2 class="footer-title">We are waiting for your visit</h2>
+                        </div>
                         <div class="address-wrapper flex align-center">
                             <img src="../../assets/icons/icon-marker.svg" alt="">
                             <a
@@ -149,7 +158,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="../../assets/images/footer-puppy.png" alt="">
+                <div class="footer-img__wrap">
+                    <img class="footer-img" src="../../assets/images/footer-puppy.png" alt="">
+                </div>
             </div>
         </div>
     </footer>
