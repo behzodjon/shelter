@@ -9,11 +9,33 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="header-background">
         <div class="container">
+            <!-- Hamburger menu -->
+            <div class="sidebar-menu">
+                <div class="slide-logo">
+                    <a href="/pages/main/index.html" class="logo">
+                        <h1 class="logo-title">Cozy House</h1>
+                        <div class="logo-desc">Shelter for pets in Boston</div>
+                    </a>
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li >
+                                <a href="/pages/main/index.html" class="active-link">About the shelter</a>
+                            </li>
+                            <li>
+                                <a  href="../../pages/pets/">Our pets</a>
+                            </li>
+                            <li><a href="../main/index.html#help">Help the shelter</a></li>
+                            <li><a href="#footer">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             <!-- header -->
             <header class="header">
                 <div class="nav-wrapper">
@@ -32,11 +54,7 @@
                             <li class="nav-item"><a class="nav-link" href="#footer">Contacts</a></li>
                         </ul>
                     </nav>
-                    <div class="burger closed">
-                        <div class="burger-item"></div>
-                        <div class="burger-item"></div>
-                        <div class="burger-item"></div>
-                    </div>
+                    <button class="hamburger"></button>
                 </div>
             </header>
             <!-- main -->

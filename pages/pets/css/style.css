@@ -1,10 +1,95 @@
 
+ .hamburger {
+    width: 30px;
+    height: 22px;
+    border: 0;
+    border-top: 2px solid #000000;
+    background: transparent;
+    position: relative;
+    position: absolute;
+    top: 18px;
+    right: 53px;
+    z-index: 5;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #000000;
+    transform: translateY(8px);
+  }
+
+  .hamburger::after {
+    transform: translateY(18px);
+  }
+
+  .hamburger.open {
+    transform: rotate(-90deg);
+  }
+  .slide-logo {
+    padding-left: 10px;
+}
+  /* Logotype - 2 elements were described earlier */
+
+  .sidebar-menu {
+    width: 320px;
+    height: 200vh;
+    position: absolute;
+    right: -320px;
+    transition: all 400ms ease-in-out;
+    padding-left: 10px;
+    background-color: #ffffff;
+    display: none;
+
+  }
+
+  .sidebar-menu.open-menu {
+    right: 0;
+    z-index: 3;
+    display: block;
+  }
+
+  .sidebar-nav ul {
+    margin-top: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  .sidebar-nav ul li a {
+    text-decoration: none;
+    font-family:"Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #545454;
+  }
+
+  .sidebar-nav a.active-link {
+    color: #292929;
+    border-bottom: 3px solid  #f1cdb3;
+    padding-bottom: 4px;
+  }
+
+
+
 /* Header */
 
 .container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 30px 10px 30px 10px;
+    position: relative;
 }
 
 .logo-nav__wrapper {
@@ -66,7 +151,6 @@
     color: #545454;
     letter-spacing: 0.1em;
     font-weight: 400;
-    text-align: center;
 }
 
 .nav-item.selected>.nav-link {
@@ -144,7 +228,6 @@ li {
     .pet-cards {
         grid-template-columns: 1fr 1fr;
     }
-
     .container {
         padding: 30px;
     }
