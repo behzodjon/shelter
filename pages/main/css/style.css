@@ -1,3 +1,86 @@
+.hamburger {
+    width: 30px;
+    height: 22px;
+    border: 0;
+    border-top: 2px solid #f1cdb3;
+    background: transparent;
+    position: relative;
+    position: absolute;
+    top: 19px;
+    right: 53px;
+    z-index: 5;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #f1cdb3;
+    transform: translateY(8px);
+}
+
+.hamburger::after {
+    transform: translateY(18px);
+}
+
+.hamburger.open {
+    transform: rotate(-90deg);
+}
+
+.sidebar-menu {
+    width: 320px;
+    height: 100%;
+    position: absolute;
+    top: -30px;
+    right: -320px;
+    transition: all 400ms ease-in-out;
+    padding-top: 30px;
+    padding-left: 10px;
+    background-color: #292929;
+    display: none;
+}
+
+.sidebar-menu.open-menu {
+    right: 0;
+    z-index: 3;
+    display: block;
+}
+
+.sidebar-nav ul {
+    margin-top: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.slide-logo {
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    font-family: "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #fafafa;
+}
+
+.sidebar-nav a.active-link {
+    border-bottom: 3px solid #f1cdb3;
+    padding-bottom: 4px;
+}
+
 .hero-btn {
     background: #F1CDB3;
     margin-top: 42px;
@@ -194,7 +277,7 @@
         display: block;
     }
 
-    .burger {
+    .hamburger {
         display: none;
     }
 
