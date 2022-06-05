@@ -1,0 +1,259 @@
+
+ .hamburger {
+    width: 30px;
+    height: 22px;
+    border: 0;
+    border-top: 2px solid #000000;
+    background: transparent;
+    position: relative;
+    position: absolute;
+    top: 18px;
+    right: 53px;
+    z-index: 5;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #000000;
+    transform: translateY(8px);
+  }
+
+  .hamburger::after {
+    transform: translateY(18px);
+  }
+
+  .hamburger.open {
+    transform: rotate(-90deg);
+  }
+  .slide-logo {
+    padding-left: 10px;
+}
+  /* Logotype - 2 elements were described earlier */
+
+  .sidebar-menu {
+    width: 320px;
+    height: 200vh;
+    position: absolute;
+    right: -320px;
+    transition: all 400ms ease-in-out;
+    padding-left: 10px;
+    background-color: #ffffff;
+    display: none;
+
+  }
+
+  .sidebar-menu.open-menu {
+    right: 0;
+    z-index: 3;
+    display: block;
+  }
+
+  .sidebar-nav ul {
+    margin-top: 158px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+  }
+
+  .sidebar-nav ul li a {
+    text-decoration: none;
+    font-family:"Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+    color: #545454;
+  }
+
+  .sidebar-nav a.active-link {
+    color: #292929;
+    border-bottom: 3px solid  #f1cdb3;
+    padding-bottom: 4px;
+  }
+
+
+
+/* Header */
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px 10px 30px 10px;
+    position: relative;
+}
+
+.logo-nav__wrapper {
+    align-items: center;
+}
+.logo-nav__inner-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger.closed {
+    margin-right: 43px;
+    padding: 0;
+    width: 30px;
+    height: 22px;
+}
+
+.burger-item {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 18px;
+    right: 44px;
+    transition: all .3s ease;
+}
+
+.pets-header__logo {
+    display: block;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pets-header__nav {
+    display: none;
+}
+
+.logo__title {
+    padding-bottom: 10px;
+    color: #545454;
+}
+
+.logo__description {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 15px;
+    color: #545454;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.nav-item.selected>.nav-link {
+    color: #F1CDB3;
+    cursor: pointer;
+}
+
+.nav-item.selected>.nav-link {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.nav-link:hover {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #F1CDB3;
+}
+
+.nav-link:hover {
+    color: #F1CDB3;
+}
+
+.nav-link {
+    color: #545454;
+}
+
+.nav-item {
+    margin-right: 35px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main {
+    background-color: #F6F6F6;
+}
+
+.pet-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+.icon-nav{
+    border: 2px solid #CDCDCD;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+.pagination-container{
+    gap: 4px;
+    margin-top: 45px;
+}
+.pagination-index{
+    background-color: #F1CDB3;
+    border: 2px solid #F1CDB3;
+}
+.golden-border{
+    border: 2px solid #F1CDB3;
+}
+.icon-nav:hover{
+    cursor: pointer;
+    background-color:#F1CDB3 ;
+}
+
+@media (min-width: 768px) {
+    .pet-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .container {
+        padding: 30px;
+    }
+    .pagination-container {
+        gap: 20px;
+    }
+    .pets-header__nav {
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }   
+}
+
+
+@media (min-width: 1280px) {
+    .pet-cards {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .container {
+        padding: 30px 10px 30px 10px;
+    }
+
+  
+
+    
+}

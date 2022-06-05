@@ -7,12 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="header-background">
         <div class="container">
+            <!-- Hamburger menu -->
+            <div class="sidebar-menu">
+                <div class="slide-logo">
+                    <a href="/pages/main/index.html" class="logo">
+                        <h1 class="logo-title">Cozy House</h1>
+                        <div class="logo-desc">Shelter for pets in Boston</div>
+                    </a>
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li >
+                                <a href="/pages/main/index.html" class="active-link">About the shelter</a>
+                            </li>
+                            <li>
+                                <a  href="../../pages/pets/">Our pets</a>
+                            </li>
+                            <li><a href="../main/index.html#help">Help the shelter</a></li>
+                            <li><a href="#footer">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             <!-- header -->
             <header class="header">
                 <div class="nav-wrapper">
@@ -26,22 +49,25 @@
                     <nav class="header-nav">
                         <ul class="nav-list">
                             <li class="nav-item selected"><a class="nav-link" href="#">About the shelter</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Our pets</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Help the shelter</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../pages/pets/">Our pets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#help">Help the shelter</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#footer">Contacts</a></li>
                         </ul>
                     </nav>
+                    <button class="hamburger"></button>
                 </div>
             </header>
             <!-- main -->
             <main>
                 <div class="hero-wrapper">
                     <div class="hero-info">
-                        <h2 class="hero-title">Not only people need a house</h2>
+                        <div class="hero-title__wrapper">
+                            <h2 class="hero-title">Not only people <br> need a house</h2>
+                        </div>
                         <p class="hero-desc">We offer to give a chance to a little and nice puppy with an extremely wide
                             and open heart.
                             He or she will love you more than anybody else in the world, you will see!</p>
-                        <button class="btn hero-btn">Make a friend</button>
+                        <a type="button" href="#friends" class="btn hero-btn">Make a friend</a>
                     </div>
                     <div class="hero-img"></div>
                 </div>
@@ -68,13 +94,13 @@
         </div>
     </section>
 
-    <section class="friends">
+    <section id="friends" class="friends">
         <div class="container">
             <div class="friends-wrapper">
                 <h2 class="friends-title">Our friends who <br>
                     are looking for a house</h2>
                 <div class="slide-wrapper">
-                    <div class="slide-nav prev">
+                    <div class="slide-nav prev desktop-nav">
                         <div class="icon-wrap">
                             <img class="slide-icon" src="../../assets/icons/prev.svg" alt="">
                         </div>
@@ -90,10 +116,22 @@
                             <div class="friend-title">Jennifer</div>
                             <button class="btn friend-btn">Learn more</button>
                         </div>
-                        <div class="friend-card">
+                        <div class="friend-card last-card">
                             <img class="img" src="../../assets/images/pets-woody.png" alt="">
                             <div class="friend-title">Woody</div>
                             <button class="btn friend-btn">Learn more</button>
+                        </div>
+                    </div>
+                    <div class="slide-nav next desktop-nav">
+                        <div class="icon-wrap">
+                            <img class="slide-icon" src="../../assets/icons/next.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-nav">
+                    <div class="slide-nav prev">
+                        <div class="icon-wrap">
+                            <img class="slide-icon" src="../../assets/icons/prev.svg" alt="">
                         </div>
                     </div>
                     <div class="slide-nav next">
@@ -103,86 +141,79 @@
                     </div>
                 </div>
                 <div class="flex justify-center friends-btn__wrapper">
-                    <button class="btn friends-btn">Get to know the rest</button>
+                    <a type="button" href="/pets.html" class="btn friends-btn">Get to know the rest</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="help">
+    <section id="help" class="help">
         <div class="container">
             <h2 class="friends-title">How you can help
                 our shelter</h2>
             <div class="help-icons__wrapper">
-                <div class="help-icons__first">
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-pet-food.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Pet food</div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-pet-food.svg" alt="">
                     </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-transportation.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Transportation</div>
-                    </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-toys.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Toys</div>
-                    </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-bowls-and-cups.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Bowls and cups</div>
-                    </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-shampoos.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Shampoos</div>
-                    </div>
-
+                    <div class="help-icon__title">Pet food</div>
                 </div>
-                <div class="help-icons__first">
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-vitamins.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Vitamins</div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-transportation.svg" alt="">
                     </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-medicines.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Medicines</div>
+                    <div class="help-icon__title">Transportation</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-toys.svg" alt="">
                     </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-collars-leashes.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Collars / leashes</div>
+                    <div class="help-icon__title">Toys</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-bowls-and-cups.svg" alt="">
                     </div>
-                    <div>
-                        <div class="flex justify-center">
-                            <img class="help-icon" src="../../assets/icons/icon-sleeping-area.svg" alt="">
-                        </div>
-                        <div class="help-icon__title">Sleeping areas</div>
+                    <div class="help-icon__title">Bowls and cups</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-shampoos.svg" alt="">
                     </div>
-
+                    <div class="help-icon__title">Shampoos</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-vitamins.svg" alt="">
+                    </div>
+                    <div class="help-icon__title">Vitamins</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper ">
+                        <img class="help-icon" src="../../assets/icons/icon-medicines.svg" alt="">
+                    </div>
+                    <div class="help-icon__title">Medicines</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-collars-leashes.svg" alt="">
+                    </div>
+                    <div class="help-icon__title">Collars / leashes</div>
+                </div>
+                <div>
+                    <div class="help-icon__wrapper">
+                        <img class="help-icon" src="../../assets/icons/icon-sleeping-area.svg" alt="">
+                    </div>
+                    <div class="help-icon__title">Sleeping areas</div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="donation">
+    <section id="donation" class="donation">
         <div class="container">
-            <div class="donation-wrapper flex">
-                <div>
-                    <img src="../../assets/images/donation-dog.png" alt="">
+            <div class="donation-wrapper ">
+                <div class="donation-dog__wrapper">
+                    <img class="donation-dog" src="../../assets/images/donation-dog.png" alt="">
                 </div>
                 <div class="donation-box">
                     <h2 class="friends-title donation-title">You can also <br> make a donation</h2>
@@ -191,7 +222,9 @@
                         <div>
                             <img src="../../assets/icons/credit-card.svg" alt="">
                         </div>
-                        <div class="donation-card__number">8380 2880 8028 8791 7435</div>
+                        <a href="#donation">
+                            <div class="donation-card__number">8380 2880 8028 8791 7435</div>
+                        </a>
                     </div>
                     <p class="donation-text">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
                         elit. Maecenas a ipsum
@@ -202,35 +235,52 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container">
-            <div class="contact-wrapper flex align-center">
-                <div>
-                    <h2 class="footer-title">For questions <br> and suggestions</h2>
-                    <div class="address-wrapper flex align-center">
-                        <img src="../../assets/icons/icon-email.svg" alt="">
-                        <div class="address-title">email@shelter.com</div>
-                    </div>
+            <div class="footer-wrapper">
+                <div class="contact-wrapper ">
+                    <div>
+                        <div>
+                            <h2 class="footer-title">For questions and suggestions</h2>
+                        </div>
+                        <div class="address-wrapper flex align-center">
+                            <img src="../../assets/icons/icon-email.svg" alt="">
+                            <a href="mailto:email@shelter.com">
+                                <div class="address-title">email@shelter.com</div>
+                            </a>
+                        </div>
 
-                    <div class="address-wrapper flex align-center">
-                        <img src="../../assets/icons/icon-phone.svg" alt="">
-                        <div class="address-title">+13 674 567 75 54</div>
+                        <div class="address-wrapper flex align-center">
+                            <img src="../../assets/icons/icon-phone.svg" alt="">
+                            <a href="tel:+13 674 567 75 54">
+                                <div class="address-title">+13 674 567 75 54</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="footer-title__wrapper">
+                            <h2 class="footer-title">We are waiting for your visit</h2>
+                        </div>
+                        <div class="address-wrapper flex align-center">
+                            <img src="../../assets/icons/icon-marker.svg" alt="">
+                            <a
+                                href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003">
+                                <div class="address-title">1 Central Street, Boston (entrance from the store)</div>
+                            </a>
+                        </div>
+
+                        <div class="address-wrapper flex align-center">
+                            <img src="../../assets/icons/icon-marker.svg" alt="">
+                            <a
+                                href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003">
+                                <div class="address-title">18 South Park, London </div>
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h2 class="footer-title">We are waiting <br> for your visit</h2>
-                    <div class="address-wrapper flex align-center">
-                        <img src="../../assets/icons/icon-marker.svg" alt="">
-                        <div class="address-title">1 Central Street, Boston (entrance from the store)</div>
-                    </div>
-
-                    <div class="address-wrapper flex align-center">
-                        <img src="../../assets/icons/icon-marker.svg" alt="">
-                        <div class="address-title">18 South Park, London </div>
-                    </div>
-                </div>
-                <div class="footer-img">
-                    <img src="../../assets/images/footer-puppy.png" alt="">
+                <div class="footer-img__wrap">
+                    <img class="footer-img" src="../../assets/images/footer-puppy.png" alt="">
                 </div>
             </div>
         </div>
