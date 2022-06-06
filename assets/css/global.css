@@ -162,6 +162,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 90px;
+    padding: 0 2rem;
 }
 
 .friends-title {
@@ -342,21 +343,27 @@ a {
     padding: 0 2rem;
 }
 
+
+
 @media (min-width: 768px) {
     .container {
         padding: 30px 30px 0 30px;
     }
+
     .friends-title {
         font-size: 35px;
         line-height: 45px;
     }
 
     .friend-cards {
+        gap: 40px;
         grid-template-columns: 1fr 1fr;
     }
-    .last-card{
+
+    .last-card {
         display: none;
     }
+
     .desktop-nav {
         display: block;
     }
@@ -364,19 +371,25 @@ a {
     .mobile-nav {
         display: none;
     }
+    .hamburger {
+        display: none;
+    }
 
     .footer {
         padding: 0;
         background: url("../images/footer-bg-768.jpg");
+        background-size: cover;
     }
+
     .footer-img__wrap {
         width: 300px;
-    height: 310px;
-    margin-top: 3rem;
-    grid-column: 1 / 5;
-    grid-row: 2/3;
-    transform: translate(0px, -13px);
+        height: 310px;
+        margin-top: 3rem;
+        grid-column: 1 / 5;
+        grid-row: 2/3;
+        transform: translate(0px, -13px);
     }
+
     .contact-wrapper {
         flex-direction: row;
         align-items: center;
@@ -387,10 +400,12 @@ a {
         font-size: 35px;
         line-height: 45px;
     }
-    .address-wrapper{
+
+    .address-wrapper {
         justify-content: start;
     }
-    .footer-title__wrapper{
+
+    .footer-title__wrapper {
         padding: 0;
     }
 }
@@ -399,9 +414,11 @@ a {
     .container {
         padding: 0px 10px 0 10px;
     }
-    .last-card{
+
+    .last-card {
         display: block;
     }
+
     .friends-title {
         padding: 0;
         margin-bottom: 60px;
@@ -450,7 +467,7 @@ a {
         letter-spacing: 0.06em;
     }
 
-  
+
 
     .contact-wrapper {
         gap: 161px;
@@ -475,7 +492,7 @@ a {
         justify-content: space-between;
     }
 
-   
+
 
     .help-icon__wrapper {
         display: flex;
