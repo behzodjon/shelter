@@ -1,5 +1,5 @@
 
- .hamburger {
+ .burger {
     width: 30px;
     height: 22px;
     border: 0;
@@ -14,8 +14,8 @@
     cursor: pointer;
   }
 
-  .hamburger::before,
-  .hamburger::after {
+  .burger::before,
+  .burger::after {
     content: "";
     position: absolute;
     top: 0;
@@ -25,11 +25,11 @@
     transform: translateY(8px);
   }
 
-  .hamburger::after {
+  .burger::after {
     transform: translateY(18px);
   }
 
-  .hamburger.open {
+  .burger.open {
     transform: rotate(-90deg);
   }
   .slide-logo {
