@@ -282,12 +282,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.slide-right {
+.navigate-next {
     transform: translateX(-1080px);
     transition: transform 500ms ease-in-out;
 }
 
-.slide-left {
+.navigate-prev {
     transform: translateX(1080px);
     transition: transform 500ms ease-in-out;
     justify-content: right;
@@ -349,11 +349,11 @@
         padding-bottom: 44px;
     }
 
-    .slide-left {
+    .navigate-prev {
         transform: translateX(270px);
     }
 
-    .slide-right {
+    .navigate-next {
         transform: translateX(-270px);
     }
 
@@ -431,11 +431,11 @@
         padding-top: 60px;
     }
 
-    .slide-left {
+    .navigate-prev {
         transform: translateX(920px);
     }
 
-    .slide-right {
+    .navigate-next {
         transform: translateX(-600px);
     }
 

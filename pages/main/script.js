@@ -1,135 +1,115 @@
-  document.querySelector(".hamburger").addEventListener("click", function (e) {
-    this.classList.toggle("open");
-    e.stopPropagation();
-  });
-  
-  document.querySelector(".hamburger").addEventListener("click", function (e) {
-    document.querySelector(".sidebar-menu").classList.toggle("open-menu");
-    e.stopPropagation();
-  });
-  
-  document.addEventListener("click", function () {
-    document.querySelector(".hamburger").classList.remove("open");
-    document.querySelector(".sidebar-menu").classList.remove("open-menu");
-  });
+document.querySelector(".hamburger").addEventListener("click", function (e) {
+  this.classList.toggle("open");
+  e.stopPropagation();
+});
 
-  const getPets = async () => {
-    try {
-        let res = await fetch('../../assets/pets.json');
-        return res.json();
-    } catch(err) {
-        console.log('Error fetching data: ', err);
-    } 
+document.querySelector(".hamburger").addEventListener("click", function (e) {
+  document.querySelector(".sidebar-menu").classList.toggle("open-menu");
+  e.stopPropagation();
+});
+
+document.addEventListener("click", function () {
+  document.querySelector(".hamburger").classList.remove("open");
+  document.querySelector(".sidebar-menu").classList.remove("open-menu");
+});
+
+//fetch data
+async function fetchPets() {
+  try {
+    let res = await fetch('../../assets/pets.json');
+    return res.json();
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-/**
- * Cards Display
- */
 
-const displayCards = async () => {
-    let pets = await getPets();
-    let slider = [];
 
-    let currentSlider = [];
-    let cards = document.querySelectorAll('.friend-card');
-    cards.forEach(card => {
-        currentSlider.push(
-            pets.find(pet => pet.name === card.children[1].innerText)
-        );
-    });
-    
-    while (slider.length < 3) {
-        let random = Math.floor(Math.random() * pets.length);
-        if (slider.indexOf(pets[random]) === -1 && currentSlider.indexOf(pets[random]) === -1) {
-            slider.push(pets[random]);
-        }
+//render items
+const renderSlideItems = async () => {
+  let pets = await fetchPets();
+  let carousel = [];
+
+  let currentCarousel = [];
+
+  while (carousel.length < 3) {
+    let random = Math.floor(Math.random() * pets.length);
+    if (carousel.indexOf(pets[random]) === -1 && currentCarousel.indexOf(pets[random]) === -1) {
+      carousel.push(pets[random]);
     }
-
-
-    slider.forEach(pet => createCard(pet));
+  }
+  carousel.forEach(pet => createSlideItem(pet));
 }
 
-const createCard = (pet) => {
-    const parent = document.querySelector('.friend-cards');
-    const card = document.createElement('div');
-    card.classList.add('friend-card');
+// create item
+const createSlideItem = (pet) => {
+  const parent = document.querySelector('.friend-cards');
+  const item = document.createElement('div');
+  item.classList.add('friend-card');
 
-    const img = document.createElement('img');
-    const p = document.createElement('p');
-    const btn = document.createElement('button');
+  const img = document.createElement('img');
+  const title = document.createElement('div');
+  const btn = document.createElement('button');
 
-    img.setAttribute('src', pet.img);
-    img.setAttribute('alt', `${pet.name} (${pet.type})`);
-    p.innerText = pet.name;
-    p.classList.add('friend-title');
-    btn.innerText = 'Learn more';
-    btn.classList.add('btn');
-    btn.classList.add('friend-btn');
+  img.setAttribute('src', pet.img);
+  title.innerText = pet.name;
+  title.classList.add('friend-title');
+  btn.innerText = 'Learn more';
+  btn.classList.add('btn');
+  btn.classList.add('friend-btn');
 
-    card.appendChild(img);
-    card.appendChild(p);
-    card.appendChild(btn);
-
-    // POP-UP event listener
-    // card.addEventListener('click', showPopup);
-
-    if (appendState === true) {
-        parent.appendChild(card);
-    } else {
-        parent.prepend(card);
-    }
+  item.appendChild(img);
+  item.appendChild(title);
+  item.appendChild(btn);
+  if (isAdd === true) {
+    parent.appendChild(item);
+  } else {
+    parent.prepend(item);
+  }
 }
 
-displayCards();
+renderSlideItems();
 
 
-/**
- * Carousel
- */
 
-let appendState = true;
+let isAdd = true;
 
 const carousel = document.querySelector('.friend-cards');
-const leftBtn = document.querySelector('.prev');
-const rightBtn = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
-const swipeCards = (cssClass) => {
-    // Disabling btns during animation
-    leftBtn.disabled = true;
-    rightBtn.disabled = true;
-console.log("dadas")
-    // State to append or prepend
-    cssClass === 'slide-left' ? appendState = false  : appendState = true;
+const carouselItems = (cssClass) => {
+  prev.disabled = true;
+  next.disabled = true;
+  cssClass === 'navigate-prev' ? isAdd = false : isAdd = true;
 
-    // Generate Cards
-    displayCards();
+  renderSlideItems();
 
-    // Add Animation Class
-    carousel.classList.add(cssClass);
+  carousel.classList.add(cssClass);
 
-    // Delete previous cards after delay
-    setTimeout(deletePrevCards, 400)
+  setTimeout(hideOtherItems, 400)
 }
 
-const deletePrevCards = () => {
-    let cards = document.querySelectorAll('.friend-card');
+const hideOtherItems = () => {
+  let items = document.querySelectorAll('.friend-card');
 
-    if (appendState === true) {
-        cards[0].remove();
-        cards[1].remove();
-        cards[2].remove();
-    } else {
-        cards[3].remove();
-        cards[4].remove();
-        cards[5].remove();
-    }
+  if (isAdd === true) {
+    items[0].remove();
+    items[1].remove();
+    items[2].remove();
+  } else {
+    items[3].remove();
+    items[4].remove();
+    items[5].remove();
+  }
 
-    carousel.classList.remove('slide-left');
-    carousel.classList.remove('slide-right');
+  carousel.classList.remove('navigate-prev');
+  carousel.classList.remove('navigate-next');
 
-    leftBtn.disabled = false;
-    rightBtn.disabled = false;
+  prev.disabled = false;
+  next.disabled = false;
 }
 
-leftBtn.addEventListener('click', () => console.log("dasd"));
-rightBtn.addEventListener('click', () => swipeCards('slide-right'));
+//navigating
+prev.addEventListener('click', () => carouselItems('navigate-prev'));
+next.addEventListener('click', () => carouselItems('navigate-next'));
