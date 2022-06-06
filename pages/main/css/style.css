@@ -12,7 +12,14 @@
     transition: transform 0.5s;
     cursor: pointer;
 }
-
+.slide-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 270px;
+    margin: 0 auto;
+}
 .hamburger::before,
 .hamburger::after {
     content: "";
@@ -43,6 +50,14 @@
     padding-left: 10px;
     background-color: #292929;
     display: none;
+}
+
+.prev {
+    order: 1;
+}
+
+.next {
+    order: 2;
 }
 
 .sidebar-menu.open-menu {
@@ -267,14 +282,27 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.slide-right {
+    transform: translateX(-1080px);
+    transition: transform 500ms ease-in-out;
+}
+
+.slide-left {
+    transform: translateX(1080px);
+    transition: transform 500ms ease-in-out;
+    justify-content: right;
+}
+
 @media (min-width: 475px) {
     .hero-img {
         background-position: center;
     }
-    .about-img{
+
+    .about-img {
         height: 610px;
     }
-    .donation-box{
+
+    .donation-box {
         width: 100%;
         margin: 0 auto;
     }
@@ -302,7 +330,10 @@
         width: fit-content;
         margin-left: 19%;
     }
-
+    .slide-wrapper {
+        width: auto;
+        margin: 0 ;
+    }
     .hero-title {
         font-size: 44px;
         line-height: 57px;
@@ -316,6 +347,14 @@
         margin-left: 19%;
         margin-right: 19%;
         padding-bottom: 44px;
+    }
+
+    .slide-left {
+        transform: translateX(270px);
+    }
+
+    .slide-right {
+        transform: translateX(-270px);
     }
 
     .hero-img {
@@ -347,6 +386,14 @@
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .prev {
+        order: 0;
+    }
+
+    .next {
+        order: 0;
     }
 
     .donation-dog__wrapper {
@@ -384,9 +431,21 @@
         padding-top: 60px;
     }
 
+    .slide-left {
+        transform: translateX(920px);
+    }
+
+    .slide-right {
+        transform: translateX(-600px);
+    }
 
     .hero-wrapper {
         padding-top: 0;
+    }
+
+    .slider-wrapper {
+        width: auto;
+        margin: 0;
     }
 
     .nav-wrapper {
@@ -644,11 +703,7 @@
 
 
 
-.slide-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .donation-title {
     text-align: center;
