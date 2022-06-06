@@ -267,6 +267,19 @@
     grid-template-columns: 1fr 1fr;
 }
 
+@media (min-width: 475px) {
+    .hero-img {
+        background-position: center;
+    }
+    .about-img{
+        height: 610px;
+    }
+    .donation-box{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 @media (min-width: 768px) {
     .header-background {
         background: url("../../../assets/images/header-background-768.jpg");
