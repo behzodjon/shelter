@@ -162,7 +162,8 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 90px;
-    padding: 0 2rem;
+    overflow: hidden;
+    height: 435px;
 }
 
 .friends-title {
@@ -279,9 +280,9 @@ a {
     font-weight: 400;
 }
 
-.desktop-nav {
+/* .desktop-nav {
     display: none;
-}
+} */
 
 .mobile-nav {
     display: flex;
@@ -371,14 +372,15 @@ a {
     .mobile-nav {
         display: none;
     }
+
     .hamburger {
         display: none;
     }
 
     .footer {
         padding: 0;
-        background: url("../images/footer-bg-768.jpg");
-        background-size: cover;
+        background: url("../images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+        ;
     }
 
     .footer-img__wrap {

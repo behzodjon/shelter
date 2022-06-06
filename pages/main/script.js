@@ -13,105 +13,123 @@
     document.querySelector(".sidebar-menu").classList.remove("open-menu");
   });
 
-//   let pets = [];
-//   let sliderCount = 3;
-//   let gap = 90;
+  const getPets = async () => {
+    try {
+        let res = await fetch('../../assets/pets.json');
+        return res.json();
+    } catch(err) {
+        console.log('Error fetching data: ', err);
+    } 
+}
+
+/**
+ * Cards Display
+ */
+
+const displayCards = async () => {
+    let pets = await getPets();
+    let slider = [];
+
+    let currentSlider = [];
+    let cards = document.querySelectorAll('.friend-card');
+    cards.forEach(card => {
+        currentSlider.push(
+            pets.find(pet => pet.name === card.children[1].innerText)
+        );
+    });
+    
+    while (slider.length < 3) {
+        let random = Math.floor(Math.random() * pets.length);
+        if (slider.indexOf(pets[random]) === -1 && currentSlider.indexOf(pets[random]) === -1) {
+            slider.push(pets[random]);
+        }
+    }
 
 
-//   function calcGapAndSliderCount() {
-//     if (window.innerWidth < 1280 && window.innerWidth >= 821) {
-//       gap = 60;
-//       sliderCount = 2;
-//     }
-//     if (window.innerWidth < 821 && window.innerWidth >= 768) {
-//       gap = 40;
-//       sliderCount = 2;
-//     }
-//     if (window.innerWidth < 768 && window.innerWidth >= 300) {
-//       gap = 0;
-//       sliderCount = 1;
-//     }
-//   }
+    slider.forEach(pet => createCard(pet));
+}
 
-//   // Carousel
-// function slideTo(page) {
-//   // window width for carousel
-//   calcGapAndSliderCount();
+const createCard = (pet) => {
+    const parent = document.querySelector('.friend-cards');
+    const card = document.createElement('div');
+    card.classList.add('friend-card');
 
-//   document.querySelector(".slider").scrollTo({
-//     left: page * sliderCount * (270 + gap),
-//     behavior: "smooth",
-//   });
-// }
-// const btnLeftEl = document.querySelector(".prev");
-// btnLeftEl.addEventListener("click", function (e) {
-//   const pagesCount = Math.ceil(pets.length / sliderCount);
-//   if (page === 0) {
-//     page = pagesCount - 1;
-//   } else {
-//     page--;
-//   }
-//   slideTo(page);
-// });
+    const img = document.createElement('img');
+    const p = document.createElement('p');
+    const btn = document.createElement('button');
 
-// const btnRightEl = document.querySelector(".next");
-// btnRightEl.addEventListener("click", function (e) {
-//   const pagesCount = Math.ceil(pets.length / sliderCount);
-//   if (page + 1 === pagesCount) {
-//     page = 0;
-//   } else {
-//     page++;
-//   }
-//   slideTo(page);
-// });
+    img.setAttribute('src', pet.img);
+    img.setAttribute('alt', `${pet.name} (${pet.type})`);
+    p.innerText = pet.name;
+    p.classList.add('friend-title');
+    btn.innerText = 'Learn more';
+    btn.classList.add('btn');
+    btn.classList.add('friend-btn');
 
-// window.onresize = () => {
-//   slideTo(page);
-// };
+    card.appendChild(img);
+    card.appendChild(p);
+    card.appendChild(btn);
+
+    // POP-UP event listener
+    // card.addEventListener('click', showPopup);
+
+    if (appendState === true) {
+        parent.appendChild(card);
+    } else {
+        parent.prepend(card);
+    }
+}
+
+displayCards();
 
 
-// function createSliderCard(pet) {
- 
-//   const sliderCardEl = document.createElement("div");
-//   sliderCardEl.classList.add("slider-card");
-//   sliderCardEl.onclick = () => {
-//     console.log("open");
-//     openModalWindow(pet);
-//     showOverlay();
-//   };
+/**
+ * Carousel
+ */
 
-//   const imgEl = document.createElement("img");
-//   imgEl.classList.add("pet-image");
-//   imgEl.src = pet.img;
+let appendState = true;
 
-//   const petNameEl = document.createElement("p");
-//   petNameEl.classList.add("pet-name");
-//   petNameEl.innerText = pet.name;
+const carousel = document.querySelector('.friend-cards');
+const leftBtn = document.querySelector('.prev');
+const rightBtn = document.querySelector('.next');
 
-//   const learnMoreBtnEl = document.createElement("button");
-//   learnMoreBtnEl.classList.add("learn-more-btn");
-//   learnMoreBtnEl.innerText = "Learn more";
+const swipeCards = (cssClass) => {
+    // Disabling btns during animation
+    leftBtn.disabled = true;
+    rightBtn.disabled = true;
+console.log("dadas")
+    // State to append or prepend
+    cssClass === 'slide-left' ? appendState = false  : appendState = true;
 
-//   sliderCardEl.append(imgEl, petNameEl, learnMoreBtnEl);
+    // Generate Cards
+    displayCards();
 
-//   return sliderCardEl;
-// }
-//   // Fetch json data
+    // Add Animation Class
+    carousel.classList.add(cssClass);
 
-// fetch("../../assets/pets.json")
-// .then((response) => response.json())
-// .then((items) => {
-//   pets = items;
-//   console.log(pets)
-//   const fragment = new DocumentFragment();
+    // Delete previous cards after delay
+    setTimeout(deletePrevCards, 400)
+}
 
-//   items.forEach((pet) => {
-//     const sliderCard = createSliderCard(pet);
-//     fragment.append(sliderCard);
-//   });
+const deletePrevCards = () => {
+    let cards = document.querySelectorAll('.friend-card');
 
-//   const sliderEl = document.getElementsByClassName("slider");
-//   if (sliderEl.length > 0) {
-//     sliderEl[0].append(fragment);
-//   }
-// });
+    if (appendState === true) {
+        cards[0].remove();
+        cards[1].remove();
+        cards[2].remove();
+    } else {
+        cards[3].remove();
+        cards[4].remove();
+        cards[5].remove();
+    }
+
+    carousel.classList.remove('slide-left');
+    carousel.classList.remove('slide-right');
+
+    leftBtn.disabled = false;
+    rightBtn.disabled = false;
+}
+
+leftBtn.addEventListener('click', () => console.log("dasd"));
+rightBtn.addEventListener('click', () => swipeCards('slide-right'));
