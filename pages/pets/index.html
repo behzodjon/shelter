@@ -15,7 +15,7 @@
 
 <body>
     <header class="container">
-         <!-- Hamburger menu -->
+         <!-- burger menu -->
          <div class="sidebar-menu">
             <div class="slide-logo">
                 <a href="/pages/main/index.html" class="logo">
@@ -50,7 +50,7 @@
                         <li class="nav-item"><a href="#footer" class="nav-link">Contacts</a></li>
                     </ul>
                 </nav>
-                <button class="hamburger"></button>
+                <button class="burger"></button>
             </div>
         </div>
     </header>
@@ -60,74 +60,34 @@
                 <h2 class="friends-title">Our friends who <br>
                     are looking for a house</h2>
                 <div class="pet-cards">
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-katrine.png" alt="">
-                        <div class="friend-title">Katrine</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-jennifer.png" alt="">
-                        <div class="friend-title">Jennifer</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-woody.png" alt="">
-                        <div class="friend-title">Woody</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/puppy.png" alt="">
-                        <div class="friend-title">Sophia</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-timmy.png" alt="">
-                        <div class="friend-title">Timmy</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-charly.png" alt="">
-                        <div class="friend-title">Charly</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/pets-scarlet.png" alt="">
-                        <div class="friend-title">Scarlett</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
-                    <div class="friend-card">
-                        <img class="img" src="../../assets/images/cat.png" alt="Freddie">
-                        <div class="friend-title">Freddie</div>
-                        <button class="btn friend-btn">Learn more</button>
-                    </div>
                 </div>
 
                 <div class="flex justify-center pagination-container">
-                    <div class="icon-nav">
+                    <button class="icon-nav button-nav button-disabled" id="backward" disabled>
                         <div class="icon-wrap">
                             <img src="../../assets/icons/first.svg" alt="">
                         </div>
-                    </div>
-                    <div class="icon-nav">
+                    </button>
+                    <button  class=" icon-nav button-nav button-disabled" id="previous" disabled>
                         <div class="icon-wrap">
                             <img src="../../assets/icons/back.svg" alt="">
                         </div>
-                    </div>
-                    <div class="icon-nav pagination-index">
+                    </button>
+                    <button class=" icon-nav pagination-index button-active button-nav" id="page-num">
                         <div class="icon-wrap ">
                           <span>1</span>
                         </div>
-                    </div>
-                    <div class="icon-nav golden-border">
+                    </button>
+                    <button class="icon-nav golden-border button-secondary button-nav" id="next">
                         <div class="icon-wrap">
                             <img src="../../assets/icons/ahead.svg" alt="">
                         </div>
-                    </div>
-                    <div class="icon-nav golden-border">
+                    </button>
+                    <button class="icon-nav golden-border button-secondary button-nav" id="last">
                         <div class="icon-wrap">
                             <img src="../../assets/icons/last.svg" alt="">
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
