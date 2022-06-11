@@ -56,7 +56,104 @@ h2 {
     color: #000000;
     line-height: 32.5px;
 }
+.modal-content img {
+    display: none;
+}
+.modal {
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.6);
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-btn {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+    background-color: #F1CDB3;
+    display: inline-block;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    padding: 15px 45px;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 350ms ease-out;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: none;
+}
+
+#modal-btn img {
+    width: 100%;
+    height: 12px;
+    object-fit: contain;
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    width: 240px;
+    height: auto;
+    background-color: #FAFAFA;
+    border-radius: 9px;
+}
+
+
+.modal-text {
+
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #000000;
+    padding: 10px 9px 10px 11px;
+    overflow-y: scroll;
+}
+
+.modal-text h3,
+.modal-text h4 {
+    color: #000000;
+}
+
+.modal-text h3 {
+    margin-bottom: 10px;
+}
+
+.modal-text p {
+    max-width: 350px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin: 40px auto;
+}
+
+.modal-text ul {
+    margin-left: 1em;
+    padding: 0;
+}
+
+.modal-text li {
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    margin-bottom: 11px;
+}
+
+.modal-text li::before {
+    content: "\2022";
+    color: #F1CDB3;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
 
 .btn {
     display: flex;
@@ -392,6 +489,13 @@ a {
         transform: translate(0px, -13px);
     }
 
+    .modal-content img {
+        width: 350px;
+        height: 350px;
+        object-fit: contain;
+        display: block;
+    }
+
     .contact-wrapper {
         flex-direction: row;
         align-items: center;
@@ -410,17 +514,31 @@ a {
     .footer-title__wrapper {
         padding: 0;
     }
+
+    .modal-content {
+        width: 650px;
+        height: 350px;
+        overflow: unset;
+    }
+  
 }
 
 @media (min-width: 1280px) {
     .container {
         padding: 0px 10px 0 10px;
     }
-
+   
+    .modal-content {
+        width: 900px;
+        height: 500px;
+    }
     .last-card {
         display: block;
     }
-
+    .modal-content img {
+        width: 500px;
+        height: 500px;
+    }
     .friends-title {
         padding: 0;
         margin-bottom: 60px;
@@ -448,6 +566,10 @@ a {
 
     .about {
         padding: 0;
+    }
+
+    .modal-text {
+        padding: 50px 20px 50px 30px;
     }
 
     .footer {
@@ -595,3 +717,5 @@ a {
 .flex-shrink {
     flex-shrink: 1;
 }
+
+
